@@ -1,0 +1,146 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo {
+    width: 55px; /* Adjust size based on your logo */
+    height: auto;
+    margin-right: 0; /* Ensure no gap between image and text */
+}
+
+.jobs-text {
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+/* General container styling */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000, #ffcc00); /* Black and Yellow Theme */
+}
+
+/* Glassmorphism effect for login box */
+.login-box {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Welcome message */
+h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Toggle Buttons */
+.toggle-buttons {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.toggle-buttons a {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    background: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle-buttons a.active {
+    background: #ffcc00;
+    color: black;
+}
+
+.toggle-buttons a:hover {
+    background: white;
+    color: black;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    color: white;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus {
+    border: 2px solid #ffcc00;
+}
+
+/* Black Login Button */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-button:hover {
+    background: #ffcc00;
+    color: black;
+}
+
+/* Error message */
+.error-message {
+    color: #dc3545;
+    background: rgba(220, 53, 69, 0.2);
+    border: 1px solid rgba(220, 53, 69, 0.4);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 2rem;
+    }
+}
