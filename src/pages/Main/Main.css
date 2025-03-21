@@ -1,7 +1,8 @@
 .main-container {
     display: flex;
     width: 100%;
-    height: 100vh; /* ✅ Ensures no blank space at bottom */
+    min-height
+    : 100vh; /* ✅ Ensures no blank space at bottom */
     background-color: #000;
     font-family: 'Arial', sans-serif;
 }
@@ -24,10 +25,11 @@
 /* Main Content - 70% (Scrollable) */
 .main-content {
     width: 70%;
-    height: 100vh;
+    min-height: 100vh;
     margin-left: 30%; /* ✅ Prevents content from going under the sidebar */
     overflow-y: auto; /* ✅ Enables scrolling */
     padding: 20px;
+    box-sizing: border-box;
 }
 
 /* Prevents Whole Page Scrolling */

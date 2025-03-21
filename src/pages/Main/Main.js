@@ -99,7 +99,6 @@ const Main = () => {
                         <li>⚙️ Job Preferences</li>
                         <li>🏢 Companies</li>
                         <li>🛠️ Services</li>
-                        <li>📂 Categories</li>
                     </ul>
                 </div>
 
@@ -110,8 +109,6 @@ const Main = () => {
                         <li>📖 About Us</li>
                         <li>🔒 Privacy Policy</li>
                         <li>⚖️ Terms & Conditions</li>
-                        <li>📞 Contact Support</li>
-                        <li>⭐ User Reviews</li>
                     </ul>
                 </div>
 

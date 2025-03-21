@@ -85,5 +85,23 @@
     "dateOfBirth": "2003-02-01",
     "age": 22,
     "registrationDate": "2025-03-21T06:04:07.519Z"
+  },
+  {
+    "id": "1742574841143",
+    "name": "Meghana B S",
+    "email": "meghanashivashankar1105@gmail.com",
+    "password": "1234",
+    "dateOfBirth": "2003-05-11",
+    "age": 21,
+    "registrationDate": "2025-03-21T16:34:01.144Z"
+  },
+  {
+    "id": "1742574934036",
+    "name": "Meghana B S",
+    "email": "meghanashivashankar1105@gmail.com",
+    "password": "1234",
+    "dateOfBirth": "2003-03-01",
+    "age": 22,
+    "registrationDate": "2025-03-21T16:35:34.038Z"
   }
 ]
