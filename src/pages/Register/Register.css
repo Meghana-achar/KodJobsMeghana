@@ -1,58 +1,34 @@
-/* Main Layout - Split 30/70 */
-.main-container {
+/* Full Page Layout */
+.register-container {
     display: flex;
-    width: 100%;
-    min-height: 100vh; /* Changed from height: 100vh */
-    background-color: #000;
-    font-family: 'Arial', sans-serif;
+    height: 100vh;
 }
 
-/* Sidebar - 30% (Fixed & Non-Scrollable) */
-.sidebar {
-    width: 28%;
-    min-height: 100vh; /* Prevents cutoff */
-    background-color: #1c1c1c;
-    color: white;
-    padding: 15px;
+/* Left Section (70%) - Logo, Proverbs, Image Slider */
+.left-section {
+    flex: 70%;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    position: fixed;
-    overflow: hidden;
-}
-
-/* Main Content - 70% (Scrollable) */
-.main-content {
-    width: 70%;
-    min-height: 100vh; /* Ensures content is not cut off */
-    margin-left: 30%;
-    overflow-y: auto;
+    justify-content: center;
+    text-align: center;
     padding: 20px;
+    position: relative;
 }
 
-/* Prevents Whole Page Scrolling */
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; 
-    overflow-y: auto; 
-}
-
-/* Logo and text container */
 .logo-container {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
     display: flex;
     align-items: center;
-    gap: 0px; /* Ensures logo and text are attached */
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 .logo {
-    width: 55px;
+    width: 55px; /* Adjust size based on your logo */
     height: auto;
+    margin-right: 0; /* Ensure no gap between image and text */
 }
 
 .jobs-text {
@@ -66,87 +42,131 @@ body, html {
     align-items: center;
 }
 
-/* Logout Button - Restored Original Design */
-.logout-button {
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #ffcc00;
+/* Proverb Container (Smooth Moving Text) */
+.proverb-container {
+    width: 70%; /* Ensures it stays within the left section */
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    font-size: 24px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: linear-gradient(135deg, #000000, #ffcc00); /* Black and Yellow Theme */
+    background: linear-gradient(135deg, #000000, #ffcc00); /* Black and Yellow Theme */
     color: black;
+}
+
+/* Slower Proverb Animation */
+@keyframes slideText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-50%); } /* Stops at halfway of 70% */
+}
+
+.proverb {
+    display: inline-block;
+    animation: slideText 15s linear infinite;
+}
+
+/* Image Slider */
+.slider {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Section (30%) - Registration Form */
+.right-section {
+    flex: 30%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Registration Box */
+.register-box {
+    background-color: rgb(212, 212, 63);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+.toggle-buttons a {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    background-color: black;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.toggle-buttons a.active {
+    background-color: black;
+    color: white;
+}
+
+.toggle-buttons a:hover {
+    background-color: #333;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+    color: black;
+}
+.welcome {
+    color: #000000;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black !important;  /* Ensures text inside the input is black */
+    background-color: white;  /* Ensures input field background is white */
+}
+
+/* Placeholder Text Color */
+.form-group input::placeholder {
+    color: black !important; /* Ensures placeholder text is black */
+    opacity: 1; /* Ensures full visibility */
+}
+
+/* Register Button */
+.register-button {
+    width: 100%;
+    padding: 12px;
+    background-color: black;
+    color: rgb(235, 230, 230);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
 }
 
-.logout-button:hover {
-    background-color: #e6b800;
+.register-button:hover {
+    background-color: #717375;
 }
 
-/* Job Grid */
-.job-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    width: 100%;
-    justify-content: center;
-}
-
-/* Job Cards - Restored Card Display */
-.job-card {
-    background: #ffcc00;
-    color: black;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Heading */
+h2 {
     text-align: center;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-/* Apply Button - Restored Original Design */
-.apply-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
+.active {
     background-color: black;
     color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    border: 1px solid black;
-}
-
-.apply-button:hover {
-    background-color: #333;
-    border: 1px solid #ccc;
-}
-
-/* 🔹 Responsive Adjustments */
-@media (max-width: 900px) {
-    .main-container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        text-align: center;
-        position: relative; /* Fix for mobile */
-        min-height: auto;
-        padding-bottom: 20px;
-    }
-
-    .main-content {
-        width: 100%;
-        margin-left: 0;
-        min-height: auto;
-    }
-
-    .job-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .job-grid {
-        grid-template-columns: 1fr; /* Fix for mobile */
-    }
 }
