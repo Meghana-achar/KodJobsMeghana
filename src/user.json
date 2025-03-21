@@ -58,5 +58,14 @@
     "dateOfBirth": "2025-03-21",
     "age": 0,
     "registrationDate": "2025-03-21T05:29:04.812Z"
+  },
+  {
+    "id": "1742536209917",
+    "name": "ruthvik",
+    "email": "r123@gmail.com",
+    "password": "12345",
+    "dateOfBirth": "2010-11-11",
+    "age": 14,
+    "registrationDate": "2025-03-21T05:50:09.919Z"
   }
 ]

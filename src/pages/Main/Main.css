@@ -2,7 +2,7 @@
 .main-container {
     display: flex;
     width: 100%;
-    min-height: 100vh; /* Changed from height: 100vh */
+    min-height: 100vh;
     background-color: #000;
     font-family: 'Arial', sans-serif;
 }
@@ -10,7 +10,7 @@
 /* Sidebar - 30% (Fixed & Non-Scrollable) */
 .sidebar {
     width: 28%;
-    min-height: 100vh; /* Prevents cutoff */
+    min-height: 100vh;
     background-color: #1c1c1c;
     color: white;
     padding: 15px;
@@ -19,14 +19,17 @@
     align-items: center;
     gap: 10px;
     position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
     overflow: hidden;
 }
 
 /* Main Content - 70% (Scrollable) */
 .main-content {
-    width: 70%;
-    min-height: 100vh; /* Ensures content is not cut off */
-    margin-left: 30%;
+    width: 72%; /* Adjusted for better alignment */
+    min-height: 100vh;
+    margin-left: 28%;
     overflow-y: auto;
     padding: 20px;
 }
@@ -47,7 +50,7 @@ body, html {
     z-index: 1000;
     display: flex;
     align-items: center;
-    gap: 0px; /* Ensures logo and text are attached */
+    gap: 5px;
 }
 
 .logo {
@@ -66,7 +69,7 @@ body, html {
     align-items: center;
 }
 
-/* Logout Button - Restored Original Design */
+/* Logout Button */
 .logout-button {
     margin-top: 10px;
     padding: 8px 15px;
@@ -89,10 +92,10 @@ body, html {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     width: 100%;
-    justify-content: center;
+    place-items: center; /* Center grid items */
 }
 
-/* Job Cards - Restored Card Display */
+/* Job Cards */
 .job-card {
     background: #ffcc00;
     color: black;
@@ -100,9 +103,11 @@ body, html {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: 90%; /* Ensure cards don't exceed width */
+    max-width: 350px; /* Prevents too large cards */
 }
 
-/* Apply Button - Restored Original Design */
+/* Apply Button */
 .apply-button {
     display: inline-block;
     margin-top: 15px;
@@ -129,7 +134,7 @@ body, html {
     .sidebar {
         width: 100%;
         text-align: center;
-        position: relative; /* Fix for mobile */
+        position: relative;
         min-height: auto;
         padding-bottom: 20px;
     }
@@ -137,7 +142,7 @@ body, html {
     .main-content {
         width: 100%;
         margin-left: 0;
-        min-height: auto;
+        height: auto;
     }
 
     .job-grid {
@@ -147,6 +152,11 @@ body, html {
 
 @media (max-width: 600px) {
     .job-grid {
-        grid-template-columns: 1fr; /* Fix for mobile */
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .job-card {
+        width: 100%; /* Full width */
+        max-width: 300px;
     }
 }
