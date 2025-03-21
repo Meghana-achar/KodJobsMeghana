@@ -1,3 +1,4 @@
+/* Logo container */
 .logo-container {
     display: flex;
     align-items: center;
@@ -27,10 +28,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height */
     padding: 20px;
     background: linear-gradient(135deg, #000000, #ffcc00);
-    gap: 0px;
 }
 
 /* Glassmorphism effect */
@@ -142,6 +142,7 @@ h2 {
 @media (max-width: 600px) {
     .login-box {
         padding: 1.5rem;
+        width: 100%;
     }
 
     h2 {
