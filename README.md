@@ -1,5 +1,15 @@
-This is a job search application that consist of register , login and main page , the data of the registered user is stored using node and express JS and the in main page , the data is fetched from the jooble website with the help of a api key.The main page consist of the all the job listings and clicking on apply button to apply.
+# Job Search Application
 
-Steps to run the Application :
-Activate the backend server : node server.js
-In another terminal : npm start
+This is a job search application that consists of Register, Login, and Main Page.
+
+- The registered user data is stored using **Node.js** and **Express.js**.
+- On the Main Page, job listings are fetched from the **Jooble API** using an API key.
+- Users can browse all job listings and apply by clicking the **"Apply"** button.
+
+## Steps to Run the Application
+
+1. Activate the backend server:  
+   
+   node server.js
+2. In another terminal, start the frontend :
+   npm start
